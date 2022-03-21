@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567 67" width="567" height="67">
+	<title>rijksmuseum-svg</title>
+	<defs>
+		<image  width="567" height="68" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjcAAABEAQMAAABHz4arAAAAAXNSR0IB2cksfwAAAAZQTFRFGBkW////Ut7imwAAAAJ0Uk5TAP9bkSK1AAAETUlEQVR4nK3YO5LcNhAAULAQIETqyNAxlOFoZJUDhzqCr0KXgg33CDs3EFQOzIDFVn8AsvEZji17qnY+3MYbEgS6gTFm+AjwGB6fYR03MADcBJ8mjIGEbw98i08GXxK1PUzcjbGw4B9sxmETSB6oVZrwgDHxIAcqZ4KdQxdyttrxFDxwZnFW7Vj8T5CzlCC4nEh+4+yXk7TjsHEszl478xMHxNm04/FvLs4hT8WBgZND6OBeOw8+OHCmF86hnQDrdDpA7U/HjpwcAnLDLifm+IHj/o0z50hxFuz30/FDR0LYWSrHVI7/SQePeez57KzaCbDb3pEQvjvr5dCAoFvmxXlgvytnNTM6ONTN5UgIvyiHhrPHd3bo4GU+d7x2HDsYKQ7dv9OJ2HbqHAlBwNG1XQ4NIYz5NHAoCZinjtWO5/OUnDLRlJlfORLSOtRZT5391pm0g8NZOzgAXjkS8sqZftLB4aydY4Jv9/3zISGtQ5P/cj4O+9KBkfOdklHgSHbAoqXHT+e8gx04f1FyDLm6UJB77fwG72PH5+pFQb/DH8pZe+cNQ7504+dvSvqekzc5b/BFOYHrWee8DRzOOx7gdN4h6LzRO18xxHfzi4uZkxprKOijcoiQLKecb9nxlSORuzh/4ggKOh+mzqEQ3+UfviIrLyNnv3GgdSa5PDqCLUNVLzqHQnyXn3mdYaRWi7OFqn6tA2cbONwxs7zikVk7E/utM1+Oac4nlvUPBqVQ1fetcyImv64uSweH0k8UFKp1y37j7Ka+79c6asUFnnICfWfrYIjv1i1yo/IrB63K4Rv23EmdE4vjK8ecdVk5GJKdh6nnV5kZHLRoJ7BTzS8K6R2e77mS0hFXOziC1tZxp6Oui/MPX1jKjtGOGTgWTO98z47Pjm2c8NTB+bXlbFPyM09VcaipdjA3tA59YGdWTpIBLUv5gePunF05c0mF29CxN04sl1LqKY/E1nGts/wXZ7pzDuWU2vXKcb0TtFNq1z9xpsYB5TgZ0I1z5Au5dbw4rnbS0LGXs46cR3FovfpLO34CL2aWT42DH2pnMZt8oayff+0dymHLZzUOnRRQ7dA/DlmtyHo+UMaqnRVnron0ZWsZSLzFqh28oJU2KOzgzNxkw6wcqnImrtc8tXjekbZYjYMLHXFwYuCZQeXgAsSRQ6vFVfYXmInog3Zs3gGCyfsvKhc5rxaHq0pU+x3e6905lNlbxz1zFu1M2Tmy8whw1h3l7OLIh5S/uXbSWcb4JgQ466A4VqpThLN+yZ567GxG9u8pwFmXxZmkaYSznqaMaofmUknT/HtCgHOdIE6uKvGq78lI0Mh5ZGcPcnLKmbnjI5zrjcT3cKudecuB8jvJ4eFc/2QncscH/rLsOH6unZ1DFpN/t7FwrseyE6CsxJbiSFDrWOkRcnBAz2V9WBxZecrPQq70JQWdTnnMOQ/mVJRM/ZC6H/XxkOve//r4AS8K9qIlKam5AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<g id="Page-1">
+		<g id="logo-rijksmuseum">
+			<use id="Fill-1" href="#img1" x="0" y="0" />
+		</g>
+	</g>
+</svg>
