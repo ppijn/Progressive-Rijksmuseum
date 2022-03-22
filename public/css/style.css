@@ -28,7 +28,7 @@ body {
 
 h1 {
   font-family: "poe-vetica-new-condensed", sans-serif;
-  font-size: calc(1.3vw + 1.3vh + 1.3vmin);
+  font-size: 1rem;
   max-width: 100%;
   /* flex-wrap: wrap; */
   color: var(--primary);
@@ -75,7 +75,9 @@ button {
 
 /* Search bar */
 form {
-  display: flex;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
   flex-direction: column;
 }
 
@@ -85,9 +87,9 @@ form {
   border-color: var(--main);
   /* font-family: "poe-vetica-new-condensed", sans-serif; */
   font-weight: 400;
-  font-size: calc(1.3vw + 1.3vh + 1.3vmin);
+  font-size: 1.3rem;
   border: none;
-  width: 100%;
+  width: 80%;
   border-radius: 0.25rem 0 0 0.25rem;
 }
 
@@ -100,8 +102,8 @@ form {
   color: black;
   margin: auto;
   align-items: center;
-  width: calc(2vw + 2vh + 2vmin);
-  height: calc(2vw + 2vh + 2vmin);
+  width: 2rem;
+  height: 2rem;
 }
 .search-button:hover {
   background-color: #24282c;
@@ -122,7 +124,7 @@ form {
 
 .open-filter {
   background-color: var(--accent);
-  width: calc(5vw + 5vh + 5vmin);
+  width: 20%;
   border-radius: 10px;
   cursor: pointer;
   margin-left: 1rem;
@@ -172,15 +174,15 @@ main section div .fa {
 .filter {
   font-family: "poe-vetica-new-condensed", sans-serif;
   color: #fcfcfc;
-  font-size: calc(2.7vw + 2.7vh + 2.7vmin);
-  width: calc(15vw + 15vh + 15vmin);
-  height: calc(5vw + 5vh + 5vmin);
+  font-size: 2rem;
+  width: 10rem;
+  height: 6rem;
 
   background-color: var(--main);
   box-shadow: 0 4px 8px #00000040;
   border-radius: 10px;
   padding: 0 18px;
-  margin-bottom: 4vh;
+  margin-bottom: 2rem;
 }
 
 .filter::placeholder {
@@ -201,9 +203,9 @@ input:focus {
 .jaar-button {
   font-family: "poe-vetica-new-condensed", sans-serif;
   color: #fcfcfc;
-  font-size: calc(2.7vw + 2.7vh + 2.7vmin);
-  width: calc(15vw + 15vh + 15vmin);
-  height: calc(5vw + 5vh + 5vmin);
+  font-size: 2rem;
+  width: 11rem;
+  height: 6rem;
   text-align: left;
   background-color: var(--main);
   box-shadow: 0 4px 8px #00000040;
@@ -218,12 +220,12 @@ input:focus {
   background-color: #c2ccce;
   position: relative;
   box-shadow: 0 4px 8px #00000040;
-  font-size: calc(2.7vw + 2.7vh + 2.7vmin);
+  font-size: 2rem;
   margin-left: 5vw;
   border-radius: 10px;
   margin-bottom: 4vh;
-  width: calc(18vw + 18vh + 18vmin);
-  height: calc(10vw + 10vh + 10vmin);
+  width: 16rem;
+  height: 6rem;
   display: inline-flex;
 }
 .jaar-open-style {
@@ -231,8 +233,8 @@ input:focus {
   font-weight: 700;
   font-family: "poe-vetica-new-condensed", sans-serif;
   background-color: #c2ccce;
-  width: calc(6.5vw + 6.5vh + 6.5vmin);
-  font-size: calc(2.7vw + 2.7vh + 2.7vmin);
+  width: 6rem;
+  font-size: 2rem;
 }
 .jaar-open-style::placeholder {
   color: var(--main);
@@ -243,7 +245,7 @@ input:focus {
   text-align: center;
   align-items: center;
   display: flex;
-  font-size: calc(2.7vw + 2.7vh + 2.7vmin);
+  font-size: 2rem;
 }
 #jaar {
   margin-left: 5vw;
@@ -260,14 +262,14 @@ input:focus {
 }
 
 .apply {
-  width: calc(5vw + 5vh + 5vmin);
-  height: 10vh;
-  align-self: center;
-  justify-content: center;
-  /* height: 54%; */
+  width: 5rem;
+  height: 3rem;
+  display: block;
   background-color: var(--accent);
   border-radius: 4px;
-  display: flex;
+  /* display: flex; */
+  margin: 0 auto;
+  margin-bottom: 2rem;
   cursor: pointer;
 }
 
@@ -276,7 +278,7 @@ input:focus {
 }
 
 .arrow-down {
-  width: calc(1vw + 5vh + 1vmin);
+  width: 2rem;
   align-self: center;
   justify-content: center;
   color: white;
