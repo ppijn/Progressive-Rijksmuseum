@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 // Stel een static map in
-app.use(express.static("/public"));
+app.use(express.static("public"));
 
 
 app.listen(port, () => {

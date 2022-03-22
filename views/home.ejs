@@ -1,0 +1,56 @@
+<section id="home">
+  <header>
+    <img src="img/rijksmuseum.png" alt="rijksmuseum logo" class="logo" />
+    <form>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Zoek naar uw kunst..."
+      />
+      <button type="submit" class="search-button">
+        <img src="img/search.svg" alt="search icon" class="search-icon" />
+      </button>
+      <button class="open-filter">
+        <i class="fa fa-filter filter-icon"></i>
+      </button>
+    </form>
+  </header>
+  <div class="error"></div>
+  <form id="filter" class="hidden">
+    <button class="jaar-button">jaar</button>
+    <div class="jaar-open hidden">
+      <input
+        class="jaar-open-style"
+        id="jaarmin"
+        type="number"
+        name="jaarmin"
+        min="1000"
+        max="2021"
+        step="20"
+        placeholder="1000"
+      />
+      <h1 class="dash">-</h1>
+      <input
+        class="jaar-open-style"
+        id="jaarmax"
+        type="number"
+        name="jaarmax"
+        min="1000"
+        max="2021"
+        step="20"
+        placeholder="2021"
+      />
+    </div>
+
+    <input
+      class="filter"
+      id="artiest"
+      type="text"
+      placeholder="artiest"
+    />
+    <input class="filter" id="type" type="text" placeholder="type" />
+    <button class="apply filter">
+      <i class="fa fa-arrow-down arrow-down"></i>
+    </button>
+  </form>
+</section>

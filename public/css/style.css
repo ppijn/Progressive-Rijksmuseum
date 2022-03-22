@@ -247,8 +247,8 @@ input:focus {
   display: flex;
   font-size: 2rem;
 }
-#jaar {
-  margin-left: 5vw;
+#jaarmin, #jaarmax {
+  margin-left: 1rem;
   /* margin-top: 3vh; */
 }
 
