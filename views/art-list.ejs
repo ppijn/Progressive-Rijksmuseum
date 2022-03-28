@@ -42,7 +42,24 @@
     </li>
   </ul>
 
-  <ul class="data-list"></ul>
+
+
+
+
+  <ul class="data-list">
+    <% data.forEach((artObject)=> { %>
+      <li class="<% artObject.id %>">
+        <a href="#information">
+          <img class="art" src="<%
+            artObject.webImage.url.slice(0, -3) + "=s1000"
+          %>" alt="<% detailed.artObject.title %>"/>
+          <span><h3><% detailed.artObject.dating.sortingDate %></h3></span>
+          <h1><% detailed.artObject.title %></h1>
+        </a>
+      </li>
+      <% } %>
+
+  </ul>
 
   <div class="next-page">
     <button class="page left"><i class="fa fa-angle-left"></i></button>

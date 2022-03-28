@@ -1,11 +1,12 @@
 <section id="home">
   <header>
     <img src="img/rijksmuseum.png" alt="rijksmuseum logo" class="logo" />
-    <form>
+    <form method="get" action="/search">
       <input
         id="search-input"
-        type="text"
+        type="search"
         placeholder="Zoek naar uw kunst..."
+        name="q"
       />
       <button type="submit" class="search-button">
         <img src="img/search.svg" alt="search icon" class="search-icon" />
@@ -53,4 +54,33 @@
       <i class="fa fa-arrow-down arrow-down"></i>
     </button>
   </form>
+</section>
+<section id="art-list">
+  <!-- Empty state / Skeleton State -->
+  <!-- <div class="line5"></div> -->
+
+  <br>
+ 
+  <ul class="data-list">
+   
+    <% data.forEach((artObject)=> { %>
+      <pre><code><% JSON.stringify(data, null, 2) %></code></pre>
+      <li class="<% artObject.id %>">
+        <a href="#information">
+          <img class="art" src="<%=
+            artObject.webImage.url.slice(0, -3) + "=s1000"
+          %>" alt="<%= artObject.title %>"/>
+          <span><h3><%= artObject.dating %></h3></span>
+          <h1><%= artObject.title %></h1>
+        </a>
+      </li>
+      <% }) %>
+
+  </ul>
+
+  <div class="next-page">
+    <button class="page left"><i class="fa fa-angle-left"></i></button>
+    <h1 class="page page-number"><%= data.length %></h1>
+    <button class="page right"><i class="fa fa-angle-right"></i></button>
+  </div>
 </section>
