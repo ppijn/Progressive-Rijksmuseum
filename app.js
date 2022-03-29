@@ -5,6 +5,8 @@ const app = express();
 const port = 3000;
 const fetch = (...args) => import("node-fetch").then(({ default: fetch}) => fetch(...args))
 
+
+
 // Set ejs in als template engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
@@ -20,12 +22,8 @@ app.listen(port, () => {
 
 app.get("/", async (request, response) => {
   const rijksAPI =
-  "https://www.rijksmuseum.nl/api/nl/collection?key=8Rynz75W&p=0-n&ps=10&imgonly=true"
-  const options = {
-    method: 'GET'
-  }
-
-  const json = await fetch(rijksAPI, options)
+  `https://www.rijksmuseum.nl/api/nl/collection?key=8Rynz75W&p=0-n&ps=10&imgonly=true`
+  const json = await fetch(rijksAPI)
   .then(res => res.json())
   .catch(e => {
     console.error({
@@ -42,12 +40,9 @@ app.get("/", async (request, response) => {
 app.get("/search", async (request, response) => {
   const rijksAPI =
   `https://www.rijksmuseum.nl/api/nl/collection?key=8Rynz75W&q=${request.query.q}&p=0-n&ps=10&imgonly=true`
-  const options = {
-    method: 'GET'
-  }
   console.log(request.query.q)
   
-  const json = await fetch(rijksAPI, options)
+  const json = await fetch(rijksAPI)
   .then(res => res.json())
   .catch(e => {
     console.error({
@@ -61,16 +56,5 @@ app.get("/search", async (request, response) => {
   })
 });
 
-// app.get("/home", async (request, response) => {
-//   console.log(response)
-//   res.render('art-list', {
-//     data: response.artObjects
-//   })
-// })
+// Service Worker 
 
-
-// function renderPage(req, res) {
-//   res.render('index', {
-//     pagetitle: 'Dit is een express pagina'
-//   });
-// }

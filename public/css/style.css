@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   font-size: 1rem;
   max-width: 100%;
   /* flex-wrap: wrap; */
@@ -67,6 +67,7 @@ button {
   background-color: var(--main);
   padding: 1rem;
   border-radius: 20px 20px 0 0;
+  margin: 0 1em 0 1em;
 }
 #information {
   background-color: var(--main);
@@ -85,7 +86,7 @@ form {
   color: var(--main);
   padding: 0.45rem;
   border-color: var(--main);
-  /* font-family: "poe-vetica-new-condensed", sans-serif; */
+  /* font-family: "Vetica"", sans-serif; */
   font-weight: 400;
   font-size: 1.3rem;
   border: none;
@@ -152,7 +153,7 @@ header form {
 }
 /* Error state */
 h2 {
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   font-size: calc(1.3vw + 1.3vh + 1.3vmin);
   color: #8e3327;
   text-align: center;
@@ -172,7 +173,7 @@ main section div .fa {
 /* De filter buttons */
 
 .filter {
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   color: #fcfcfc;
   font-size: 2rem;
   width: 10rem;
@@ -201,7 +202,7 @@ input:focus {
 }
 
 .jaar-button {
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   color: #fcfcfc;
   font-size: 2rem;
   width: 11rem;
@@ -231,14 +232,14 @@ input:focus {
 .jaar-open-style {
   color: #f9f9f9;
   font-weight: 700;
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   background-color: #c2ccce;
   width: 6rem;
   font-size: 2rem;
 }
 .jaar-open-style::placeholder {
   color: var(--main);
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica"", sans-serif;
 }
 .dash {
   color: var(--main);
@@ -306,7 +307,7 @@ span {
 h3 {
   position: absolute;
   color: var(--main);
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   background-color: #c2ccce;
   padding: 0.5em;
   font-weight: 800;
@@ -395,7 +396,7 @@ h3 {
 }
 
 .page-number {
-  font-family: "poe-vetica-new-condensed", sans-serif;
+  font-family: "Vetica", sans-serif;
   font-weight: 600;
 }
 

@@ -8,17 +8,17 @@
         placeholder="Zoek naar uw kunst..."
         name="q"
       />
-      <button type="submit" class="search-button">
+      <button type="submit" class="search-button" name="search-button">
         <img src="img/search.svg" alt="search icon" class="search-icon" />
       </button>
-      <button class="open-filter">
+      <button class="open-filter" name="open-filter">
         <i class="fa fa-filter filter-icon"></i>
       </button>
     </form>
   </header>
   <div class="error"></div>
   <form id="filter" class="hidden">
-    <button class="jaar-button">jaar</button>
+    <button class="jaar-button" name="jaar">jaar</button>
     <div class="jaar-open hidden">
       <input
         class="jaar-open-style"
@@ -50,14 +50,12 @@
       placeholder="artiest"
     />
     <input class="filter" id="type" type="text" placeholder="type" />
-    <button class="apply filter">
+    <button class="apply filter" name="apply-filter">
       <i class="fa fa-arrow-down arrow-down"></i>
     </button>
   </form>
 </section>
 <section id="art-list">
-  <!-- Empty state / Skeleton State -->
-  <!-- <div class="line5"></div> -->
 
   <br>
  
@@ -79,8 +77,8 @@
   </ul>
 
   <div class="next-page">
-    <button class="page left"><i class="fa fa-angle-left"></i></button>
+    <button class="page left" name="page-left"><i class="fa fa-angle-left"></i></button>
     <h1 class="page page-number"><%= data.length %></h1>
-    <button class="page right"><i class="fa fa-angle-right"></i></button>
+    <button class="page right" name="page-right"><i class="fa fa-angle-right"></i></button>
   </div>
 </section>
