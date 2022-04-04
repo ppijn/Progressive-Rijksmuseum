@@ -3,13 +3,7 @@ const dynamicCache = 'site-dynamic-v1'
 const assets = [
   '/',
   '/css/style.css',
-  '/img/rijksmuseum.png',
-  '/img/search.svg',
-  '/img/arrow.svg',
-  '/img/icon-192x192.png',
-  '/img/icon-256x256.png',
-  '/img/icon-384x384.png',
-  '/img/icon-512x512.png',
+  '/img',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'  
 ];
 
