@@ -7,13 +7,12 @@ For this course we needed to change our Web App Page from client-side rendering 
 - [User story](#user-story)
 - [Client- vs. serverside rendering](#client--vs.-serverside-rendering)
 - [Install](#install)
-- [Features](#)
-- [Service worker](#)
-- [Enhancements for the critical rendering path](#)
-- [Feature checklist](#)
-- [Activity diagram](#)
-- [Sources](#)
-- [License](#)
+- [Features](#features)
+- [Service worker](#service-worker)
+- [Enhancements for the critical rendering path](#enhancement-for-the-critical-rendering-path)
+- [Feature checklist](#feature-checklist)
+- [Activity diagram](#activity-diagram)
+
 
 # User Story
 
@@ -28,7 +27,7 @@ The basic difference between the client and server is that client relies on the 
 
 They are both usefull for different things. It was our tasks to convert our Web App from client side to server side.
 
-![sketch](https://github.com/ppijn/rijksmuseum/blob/RijksmuseumW3/spa/img/Readme/poster1.PNG)
+![sketch](https://github.com/ppijn/Progressive-Rijksmuseum/blob/main/public/img/readme/sketch.jpg)
 
 
 # Install 
@@ -37,3 +36,8 @@ I started by updating my version of Node.JS and NPM using Node Version Manager. 
 
 After that I started with Express. I navigated to my project directory to `npm init`. This makes a `package.json` file to store, among other things, dependencies. I installed Express using `npm install express`. After that i added a render function to my app.js to render the index.html file in my directory.
 
+# Features
+# Service Worker
+# Enhancement for the critical rendering path
+# Feature Checklist
+# Activity Diagram
