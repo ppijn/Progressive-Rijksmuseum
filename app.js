@@ -31,6 +31,7 @@ app.get("/", async (request, response) => {
       error: e,
     })
   })
+  
   // console.log(json.artObjects)
   response.render("index", {
     data: json.artObjects

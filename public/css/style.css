@@ -304,6 +304,7 @@ a {
 span {
   position: relative;
 }
+
 h3 {
   position: absolute;
   color: var(--main);
@@ -311,7 +312,8 @@ h3 {
   background-color: #c2ccce;
   padding: 0.5em;
   font-weight: 800;
-  font-size: calc(1vw + 1vh + 1vmin);
+  font-size: calc(.5vw + .5vh + .5vmin);
+  width: 15em;
 
   border-radius: 5px;
   top: 80%;

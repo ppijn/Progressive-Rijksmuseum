@@ -1,14 +1,16 @@
-const staticCacheName = "site-static";
+const staticCacheName = "site-static-v8";
+const dynamicCache = 'site-dynamic-v1'
 const assets = [
   '/',
-  '/views/index.ejs',
-  '/views/home.ejs',
-  '/views/partials/foot.ejs',
-  '/views/partials/head.ejs',
-  '/public/css/style.css',
-  '/public/img/rijksmuseum.png',
-  '/app.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+  '/css/style.css',
+  '/img/rijksmuseum.png',
+  '/img/search.svg',
+  '/img/arrow.svg',
+  '/img/icon-192x192.png',
+  '/img/icon-256x256.png',
+  '/img/icon-384x384.png',
+  '/img/icon-512x512.png',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'  
 ];
 
 self.addEventListener('install', evt => {
@@ -25,11 +27,30 @@ self.addEventListener('install', evt => {
 
 self.addEventListener('activate', evt => {
   // console.log('service worker has been activated');
+  evt.waitUntil(
+    caches.keys().then(keys => {
+      // console.log(keys); 
+      return Promise.all(keys
+        .filter(key  => key !== staticCacheName)
+        .map(key => caches.delete(key))
+        )
+    })
+  );
 });
 
 // fetch
 
 self.addEventListener('fetch', evt => {
   // console.log('fetch event', evt);
+  evt.respondWith(
+    caches.match(evt.request).then(cacheRes => {
+      return cacheRes || fetch(evt.request).then(fetchRes => {
+        return caches.open(dynamicCache).then(cache => {
+          cache.put(evt.request.url, fetchRes.clone());
+          return fetchRes;
+        })
+      });
+    })
+  );
 });
 
