@@ -1,10 +1,10 @@
-const staticCacheName = "site-static-v8";
-const dynamicCache = 'site-dynamic-v1'
+const staticCacheName = "site-static-v5";
+const dynamicCacheName = 'site-dynamic-v1'
 const assets = [
+  '/offline',
   '/',
   '/css/style.css',
-  '/img',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'  
+  '/img'
 ];
 
 self.addEventListener('install', evt => {
@@ -25,7 +25,7 @@ self.addEventListener('activate', evt => {
     caches.keys().then(keys => {
       // console.log(keys); 
       return Promise.all(keys
-        .filter(key  => key !== staticCacheName)
+        .filter(key  => key !== staticCacheName && key !== dynamicCacheName)
         .map(key => caches.delete(key))
         )
     })
@@ -39,12 +39,12 @@ self.addEventListener('fetch', evt => {
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
-        return caches.open(dynamicCache).then(cache => {
+        return caches.open(dynamicCacheName).then(cache => {
           cache.put(evt.request.url, fetchRes.clone());
           return fetchRes;
         })
       });
-    })
+    }).catch(() => caches.match('/fallback'))
   );
 });
 

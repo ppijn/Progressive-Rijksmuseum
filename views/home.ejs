@@ -1,6 +1,12 @@
 <section id="home">
   <header>
-    <img src="img/rijksmuseum.png" alt="rijksmuseum logo" class="logo" />
+    <img 
+    src="img/rijksmuseum.avif"
+    alt="rijksmuseum logo" 
+    class="logo"
+    width="70%"
+    height="auto"
+     />
     <form method="get" action="/search">
       <input
         id="search-input"
@@ -8,11 +14,13 @@
         placeholder="Zoek naar uw kunst..."
         name="q"
       />
-      <button type="submit" class="search-button" name="search-button">
+      <button type="submit" class="search-button" aria-label="search-button">
         <img src="img/search.svg" alt="search icon" class="search-icon" />
       </button>
-      <button class="open-filter" name="open-filter">
-        <i class="fa fa-filter filter-icon"></i>
+      <button class="open-filter" aria-label="open-filter">
+        <svg width="1em" height="auto" viewBox="0 0 102 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M96.7251 0H3.72506C-1.87494 2 0.0583907 6.83333 1.72506 9L36.2251 43V80.5L56.7251 100.5C61.1251 102.1 63.8917 98.8333 64.7251 97V43L100.225 7C103.025 2.6 99.0584 0.5 96.7251 0Z" fill="white"/>
+          </svg>
       </button>
     </form>
   </header>
@@ -62,12 +70,12 @@
   <ul class="data-list">
    
     <% data.forEach((artObject)=> { %>
-      <pre><code><% JSON.stringify(data, null, 2) %></code></pre>
       <li class="<% artObject.id %>">
-        <a href="#information">
-          <img class="art" src="<%=
-            artObject.webImage.url.slice(0, -3) + "=s1000"
-          %>" alt="<%= artObject.title %>"/>
+        <a href="/detail">
+          <img 
+          class="art" 
+          src=<%= artObject.webImage.url.slice(0, -3)+"=s300" %> 
+          alt="<%= artObject.title %>"/>
           <span><h3><%= artObject.principalOrFirstMaker %></h3></span>
           <h1><%= artObject.title %></h1>
         </a>
@@ -77,8 +85,6 @@
   </ul>
 
   <div class="next-page">
-    <button class="page left" name="page-left"><i class="fa fa-angle-left"></i></button>
     <h1 class="page page-number"><%= data.length %></h1>
-    <button class="page right" name="page-right"><i class="fa fa-angle-right"></i></button>
-  </div>
+    </div>
 </section>

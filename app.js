@@ -4,8 +4,10 @@ const { read } = require('fs');
 const app = express();
 const port = 3000;
 const fetch = (...args) => import("node-fetch").then(({ default: fetch}) => fetch(...args))
+const compression = require('compression');
 
 
+app.use(compression());
 
 // Set ejs in als template engine
 app.set("view engine", "ejs");
@@ -56,6 +58,15 @@ app.get("/search", async (request, response) => {
     data: json.artObjects
   })
 });
+
+app.get('/offline', function (request, response) {
+  response.render('fallback')
+})
+
+app.get("/detail", function (request, response) {
+  response.render('detail')
+});
+
 
 // Service Worker 
 
