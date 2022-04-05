@@ -1,19 +1,17 @@
-const http = require('http');
 const express = require("express");
-const { read } = require('fs');
 const app = express();
 const port = 3000;
 const fetch = (...args) => import("node-fetch").then(({ default: fetch}) => fetch(...args))
 const compression = require('compression');
 
 
-app.use(compression());
 
 // Set ejs in als template engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
 // Stel een static map in
+app.use(compression());
 app.use(express.static("public"));
 
 
@@ -37,6 +35,23 @@ app.get("/", async (request, response) => {
   // console.log(json.artObjects)
   response.render("index", {
     data: json.artObjects
+  })
+});
+
+app.get("/detail/:id", async (request, response) => {
+  const rijksAPI =
+  `https://www.rijksmuseum.nl/api/nl/collection/${request.params.id}?key=8Rynz75W&p=0-n&ps=10&imgonly=true`
+  const json = await fetch(rijksAPI)
+  .then(res => res.json())
+  .catch(e => {
+    console.error({
+      'message': 'oh no',
+      error: e,
+    })
+  }).then(data=>{
+    response.render("detail", {
+      data: data
+    })
   })
 });
 

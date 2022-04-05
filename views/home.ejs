@@ -4,8 +4,8 @@
     src="img/rijksmuseum.avif"
     alt="rijksmuseum logo" 
     class="logo"
-    width="70%"
-    height="auto"
+    width="700px"
+    height="50px"
      />
     <form method="get" action="/search">
       <input
@@ -71,11 +71,13 @@
    
     <% data.forEach((artObject)=> { %>
       <li class="<% artObject.id %>">
-        <a href="/detail">
+        <a href="/detail/<%= artObject.objectNumber %>">
           <img 
           class="art" 
           src=<%= artObject.webImage.url.slice(0, -3)+"=s300" %> 
-          alt="<%= artObject.title %>"/>
+          alt="<%= artObject.title %>"
+          width="200"
+          height="400"/>
           <span><h3><%= artObject.principalOrFirstMaker %></h3></span>
           <h1><%= artObject.title %></h1>
         </a>
