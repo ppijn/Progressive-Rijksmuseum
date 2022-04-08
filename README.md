@@ -2,6 +2,9 @@
 
 For this course we needed to change our Web App Page from client-side rendering to server-side rendering. This was a challenge since I had no experience in the languages used for this at all.
 
+Link to Web Page:
+https://progressive-rijksmuseum.herokuapp.com/
+
 # Table of Content:
 
 - [User story](#user-story)
