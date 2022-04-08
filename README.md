@@ -188,15 +188,15 @@ In order to make the rendering path quicker and Enhance the Progressiveness from
 
 I was struggeling with this since my report kept saying I have a 29 or 42 progressiveness. Which is really really low. I wanted to figure out what was going wrong and updated my code a lot. In the end, it jumped up to about 68-72 which was still not good. 
 
-![Lighthouse report windows](...)
+![Lighthouse report windows](https://github.com/ppijn/Progressive-Rijksmuseum/blob/main/public/img/readme/Lighthouse-windows.jpg)
 
 What the problem actually was, was that my laptop just has a very bad CPU...
 the error that the report was showing me was `Reduce initial server response time`. And basically to improve this, you had to get a better CPU. 
 So, I wanted to test it on a better laptop (a MacBook Pro) and do a Lighthouse report there. 
 The results were interesting since my Progressiveness was way better.
 
-![Lighthouse report macbook](...)
+![Lighthouse report macbook](https://github.com/ppijn/Progressive-Rijksmuseum/blob/main/public/img/readme/Lighthouse-mac.png)
 
 # Activity Diagram
 
-![Activity Diagram](...)
+![Activity Diagram](https://github.com/ppijn/Progressive-Rijksmuseum/blob/main/public/img/readme/Activity%20Diagram%20PWA.png)
